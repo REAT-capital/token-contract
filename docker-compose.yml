@@ -1,0 +1,13 @@
+services:
+  app:
+    image: reat-smart-contract
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    volumes:
+      - .:/app
+    networks:
+      - default
+networks:
+  default:
+    name: reatSmartContractNetwork
